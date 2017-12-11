@@ -26,7 +26,7 @@ apply plugin: 'com.tencent.tinker.patch'
 
 3：配置ApplicationLike
 详见:https://github.com/Tencent/tinker/wiki/Tinker-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95
-
+![](./pics/1.png)
 
 4：gradle 参数配置
 参数配置详解：https://github.com/Tencent/tinker/wiki/Tinker-%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97

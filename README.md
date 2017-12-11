@@ -1,10 +1,10 @@
-##官方WIKI
+## 官方WIKI
 https://github.com/Tencent/tinker/wiki
 
-##Tinker接入指南
+## Tinker接入指南
 https://github.com/Tencent/tinker/wiki/Tinker-%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97
 
-###个人总结:
+### 个人总结:
 
 基本使用
 
@@ -74,6 +74,6 @@ apply plugin: 'com.tencent.tinker.patch'
 
 ![alt t](./pics/9.png)
 
-##高级
+## 高级
 
 

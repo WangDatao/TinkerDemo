@@ -6,6 +6,11 @@ import android.content.Intent;
 import android.support.multidex.MultiDex;
 
 import com.tencent.tinker.anno.DefaultLifeCycle;
+import com.tencent.tinker.lib.listener.DefaultPatchListener;
+import com.tencent.tinker.lib.patch.AbstractPatch;
+import com.tencent.tinker.lib.patch.UpgradePatch;
+import com.tencent.tinker.lib.reporter.DefaultLoadReporter;
+import com.tencent.tinker.lib.reporter.DefaultPatchReporter;
 import com.tencent.tinker.lib.tinker.TinkerInstaller;
 import com.tencent.tinker.loader.app.DefaultApplicationLike;
 import com.tencent.tinker.loader.shareutil.ShareConstants;
@@ -32,6 +37,12 @@ public class BaseApplicationLike extends DefaultApplicationLike {
         super.onBaseContextAttached(base);
         MultiDex.install(base);
 
-        TinkerInstaller.install(this);
+        DefaultLoadReporter loadReporter = new DefaultLoadReporter(getApplication());
+        DefaultPatchReporter patchReporter = new DefaultPatchReporter(getApplication());
+        DefaultPatchListener patchListener = new DefaultPatchListener(getApplication());
+        AbstractPatch upgradePatchProcessor = new UpgradePatch();
+
+        TinkerInstaller.install(this , loadReporter,patchReporter,patchListener ,
+                CusResultService.class, upgradePatchProcessor);
     }
 }

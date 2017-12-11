@@ -29,9 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView tv = (TextView) findViewById(R.id.tv);
         Button btn = (Button) findViewById(R.id.btn);
         btn.setOnClickListener(this);
-//        tv.setText("修复前");
 //        tv.setText("修复后");
-        tv.setText("Release包修复后");
+        tv.setText("加载补丁包后不会立即退出应用");
     }
 
     private void requestAppPermissions() {

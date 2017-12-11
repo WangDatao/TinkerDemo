@@ -39,6 +39,9 @@ apply plugin: 'com.tencent.tinker.patch'
 4.gradle 参数配置
 参数配置详解：https://github.com/Tencent/tinker/wiki/Tinker-%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97
 
+[Demo中的配置](https://github.com/WangDatao/TinkerDemo/blob/master/app/build.gradle)
+
+[官方sample中配置](https://github.com/Tencent/tinker/blob/master/tinker-sample-android/app/build.gradle)
 5.生成基准APK
 
 生成apk,对应的R文件
